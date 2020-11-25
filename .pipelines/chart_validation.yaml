@@ -16,3 +16,7 @@ pool:
 container: chart-testing
 
 steps:
+ - task: Bash@3
+   inputs:
+     targetType: 'inline'
+     script: 'ct lint --all --debug --chart-dirs .'

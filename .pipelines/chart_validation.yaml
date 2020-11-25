@@ -1,0 +1,18 @@
+
+resources:
+  containers:
+  - container: chart-testing
+    image: quay.io/helmpack/chart-testing:v3.3.0
+
+trigger: none
+pr:
+  branches:
+    include:
+    - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+container: chart-testing
+
+steps:

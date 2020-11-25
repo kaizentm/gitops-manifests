@@ -13,8 +13,9 @@ pr:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: quay.io/helmpack/chart-testing:v3.3.0
-options: sh  
+container: 
+  image: quay.io/helmpack/chart-testing:v3.3.0
+  options: sh  
 
 steps:
  - task: Bash@3

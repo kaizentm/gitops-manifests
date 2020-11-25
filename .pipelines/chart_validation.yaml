@@ -1,8 +1,8 @@
 
-resources:
-  containers:
-  - container: chart-testing
-    image: quay.io/helmpack/chart-testing:v3.3.0
+# resources:
+#   containers:
+#   - container: chart-testing
+#     image: quay.io/helmpack/chart-testing:v3.3.0
 
 trigger: none
 pr:
@@ -13,7 +13,7 @@ pr:
 pool:
   vmImage: 'ubuntu-latest'
 
-container: chart-testing
+container: quay.io/helmpack/chart-testing:v3.3.0
 
 steps:
  - task: Bash@3

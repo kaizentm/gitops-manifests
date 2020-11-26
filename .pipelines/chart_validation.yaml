@@ -9,6 +9,7 @@ pool:
 
 steps:
 - task: Bash@3
+  displayName: Lint Helm Charts
   inputs:
     targetType: 'inline'
     script: |

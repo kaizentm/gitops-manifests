@@ -9,6 +9,21 @@ pool:
 
 steps:
 - task: Bash@3
+  displayName: Install Kubeval
+  inputs:
+    targetType: 'inline'
+    script: |
+      wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+      tar xf kubeval-linux-amd64.tar.gz
+      sudo cp kubeval /usr/local/bin]
+
+- task: Bash@3
+  displayName: Validate Kubeneretes configuration using Kubeval
+  inputs:
+    targetType: 'inline'
+    script: 'kubeval -d .'
+
+- task: Bash@3
   displayName: Lint Helm Charts
   inputs:
     targetType: 'inline'

@@ -18,7 +18,7 @@ steps:
       sudo cp kubeval /usr/local/bin]
 
 - task: Bash@3
-  displayName: Validate Kubeneretes configuration using Kubeval
+  displayName: Validate Kubeneretes configuration with Kubeval
   inputs:
     targetType: 'inline'
     script: 'kubeval -d .'

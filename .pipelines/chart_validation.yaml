@@ -1,0 +1,32 @@
+trigger: none
+pr:
+  branches:
+    include:
+    - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Bash@3
+  displayName: Install Kubeval
+  inputs:
+    targetType: 'inline'
+    script: |
+      wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval-linux-amd64.tar.gz
+      tar xf kubeval-linux-amd64.tar.gz
+      sudo cp kubeval /usr/local/bin]
+
+- task: Bash@3
+  displayName: Validate Kubeneretes configuration with Kubeval
+  inputs:
+    targetType: 'inline'
+    script: 'kubeval -d .'
+
+- task: Bash@3
+  displayName: Lint Helm Charts
+  inputs:
+    targetType: 'inline'
+    script: |
+      docker pull quay.io/helmpack/chart-testing:v3.3.0
+      docker run --rm --name ct --volume $(pwd):/data quay.io/helmpack/chart-testing:v3.3.0 sh -c "ct lint --all --debug --chart-dirs /data/ --chart-dirs /data/helm-azure-vote-app-deployment/"

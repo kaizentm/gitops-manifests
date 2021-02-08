@@ -5,4 +5,4 @@ images:
     newTag: v2
 resources:
   - ../../base 
-namespace: az-vote-stage   
+namespace: az-vote-stage

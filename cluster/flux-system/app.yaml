@@ -8,11 +8,11 @@ spec:
   path: ./kustomize-azure-vote-app-deployment/overlays/staging
   prune: true
   healthChecks:
-    - apiVersion: 
+    - apiVersion: apps/v1
       kind: Service
       name: azure-vote-front
       namespace: az-vote-stage
-    - apiVersion: 
+    - apiVersion: apps/v1
       kind: Service
       name: azure-vote-back
       namespace: az-vote-stage  

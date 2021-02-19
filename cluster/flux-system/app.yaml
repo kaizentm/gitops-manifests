@@ -4,6 +4,8 @@ metadata:
   name: az-vote-app
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: fake-resource
   interval: 30s
   path: ./kustomize-azure-vote-app-deployment/overlays/staging
   prune: true

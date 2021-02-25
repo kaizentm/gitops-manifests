@@ -1,0 +1,4 @@
+title: "Awesome Voting App"
+serviceType: ClusterIP
+imageRepo: gitopsflowacr.azurecr.io/azvote
+demoAppUrl: /azvote-stage

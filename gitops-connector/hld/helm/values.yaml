@@ -1,10 +1,16 @@
 imageName: kaizentm/gitops-connector
-imageTag: 0.1.38
+imageTag: 0.1.41
 containerPort: 8080
 
+gitRepositoryType: 
+ciCdOrchestratorType: 
+gitOpsOperatorType: 
 gitOpsAppURL: 
 azdoGitOpsRepoName: test
 azdoPrRepoName: 
 azdoOrgUrl: 
 orchestratorPAT: 
 
+gitHubGitOpsRepoName: 
+gitHubGitOpsManifestsRepoName: 
+gitHubOrgUrl: 

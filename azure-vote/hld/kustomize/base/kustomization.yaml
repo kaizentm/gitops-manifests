@@ -3,10 +3,9 @@ kind: Kustomization
 
 namespace: dev
 
-images:
-  - name: gitopsflowacr.azurecr.io/azvote/azure-vote-front
-    newTag: bcf51fd991d0406a600bf729c1217f00d627954c
-  - name: gitopsflowacr.azurecr.io/azvote/azure-vote-back
-    newTag: bcf51fd991d0406a600bf729c1217f00d627954c
+images:  
+  - name: gitopsflowacr.azurecr.io/azvote/azvote/azure-vote-back
+    newTag: d1384df9241fb2af0341982524292c36883f8e71
+
 resources:
   - manifests.yaml

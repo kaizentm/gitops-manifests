@@ -1,0 +1,5 @@
+title: "Sample Voting Application"
+serviceType: ClusterIP
+imageRepo: gitopsflowacr.azurecr.io/azvote
+demoAppUrl: /azvote-dev
+systemLabel: 

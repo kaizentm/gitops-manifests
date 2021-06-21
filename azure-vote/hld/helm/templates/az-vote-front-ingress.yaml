@@ -4,6 +4,8 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
   name: az-vote-front-ingress
+  labels:
+    system: {{  .Values.systemLabel}} 
 spec:
   rules:
   - http:

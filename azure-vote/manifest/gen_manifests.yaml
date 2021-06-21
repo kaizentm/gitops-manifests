@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    system: null
+    system: azure-vote
   name: azure-vote-front
   namespace: dev
 spec:
@@ -26,7 +26,7 @@ spec:
     metadata:
       labels:
         app: azure-vote-front
-        system: null
+        system: azure-vote
     spec:
       containers:
       - env:
@@ -47,7 +47,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
   labels:
-    system: null
+    system: azure-vote
   name: az-vote-front-ingress
   namespace: dev
 spec:
@@ -65,7 +65,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    system: null
+    system: azure-vote
   name: azure-vote-back
   namespace: dev
 spec:
@@ -88,7 +88,7 @@ spec:
     metadata:
       labels:
         app: azure-vote-back
-        system: null
+        system: azure-vote
     spec:
       containers:
       - env:
